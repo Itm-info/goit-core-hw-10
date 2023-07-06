@@ -8,9 +8,11 @@ public class WordsList {
         int value;
         Node next, prev;
 
-        Node(String key, int value) {
+        // Create new entry (node) and add it to the end of the WordsList.
+        // We will only create new entry for words not yet present in the List
+        private Node(String key) {
             this.key = key;
-            this.value = value;
+            this.value = 1;
             if (first == null) {
                 first = this;
             }
@@ -24,7 +26,7 @@ public class WordsList {
         }
     }
 
-    public Node get(String key) {
+    public Node get(String key) { // get Node object by key
         Node seek = first;
         while(seek != null) {
             if (seek.key.equals(key)) return seek;
@@ -33,10 +35,11 @@ public class WordsList {
         return seek;
     }
 
+    // Increment word occurrence count and rearrange respective entry position in the WordsList
     public void inc(String key){
         Node node = get(key);
         if( node == null ) {
-            new Node(key, 1);
+            new Node(key);
         }
         else {
             ++node.value;

@@ -1,6 +1,6 @@
 package itm;
 
-import itm.oneandtwo.PhoneBookReader;
+import itm.one.PhoneBookReader;
 import itm.three.WordsList;
 import itm.two.SpaceSeparatedToJson;
 import itm.three.WordsCountInText;

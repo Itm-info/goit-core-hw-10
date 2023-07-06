@@ -1,4 +1,4 @@
-package itm.oneandtwo;
+package itm.one;
 
 import java.io.FileInputStream;
 import java.io.IOException;
